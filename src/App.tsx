@@ -32,8 +32,8 @@ const ThemedCard: React.FC<ThemedCardProps> = ({ theme, title, content }) => {
   };
 
   const titleStyles: Record<ThemeType, React.CSSProperties> = {
-    light: { color: '#747674ff', marginBottom: '10px' },
-    dark: { color: '#090909ff', marginBottom: '10px' },
+    light: { color: '#4CAF50', marginBottom: '10px' },
+    dark: { color: '#2196F3', marginBottom: '10px' },
   };
 
   return (
@@ -46,8 +46,7 @@ const ThemedCard: React.FC<ThemedCardProps> = ({ theme, title, content }) => {
 
 ThemedCard.displayName = 'ThemedCard';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const ThemedCardWithTheme = withTheme(ThemedCard);
+export const ThemedCardWithTheme = withTheme(ThemedCard);
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<ThemeType>('light');
